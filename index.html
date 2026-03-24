@@ -993,6 +993,9 @@ else about [topic] your assistant should be able to do?"
 
 # Let's Begin
 
+Start immediately. Do not ask what the user wants to do — just follow
+the instructions in this prompt.
+
 How much time do you have for this task and skills mapping session?
 
 → Quick version (8-10 minutes)
@@ -1222,15 +1225,16 @@ your assistant should know?"
 
 # Let's Begin
 
-How much time do you have for this knowledge mapping session?
+Start immediately. Do not ask what the user wants to do — just follow
+the instructions in this prompt.
 
-→ Quick version (8-10 minutes)
-→ Standard version (15-20 minutes)
-→ Deep dive (25+ minutes)
+The user should have a skills-document from Prompt 1. Ask them to
+paste it first, so you know what task and skills they are working with.
+Then proceed with Phase 0.
 
-And: what task will your AI assistant help you with? If you're not sure
-yet, just tell me your role or what you study — I'll help you find a
-task that makes sense.</pre>
+Please paste your skills-document from Prompt 1 (the output about
+your task and skills). Then I'll ask you a few questions to map the
+knowledge your assistant needs.</pre>
           </div>
           <p class="prompt-tip"><strong>Tip:</strong> Hoe meer context je geeft, hoe beter je assistent wordt. Neem de tijd.</p>
         </div>
@@ -1448,8 +1452,24 @@ respond.
 
 # Let's Begin
 
-I can see you've provided two documents. Let me review them and then
-ask you 3 quick questions to complete your assistant's instructions.</pre>
+Start immediately. Do not ask what the user wants to do — just follow
+the instructions in this prompt.
+
+The user should paste two documents before this prompt:
+1. Their skills-document (from Prompt 1)
+2. Their knowledge-document (from Prompt 2)
+
+If both documents are present, review them and start with Step 2
+(the 3 clarifying questions).
+
+If one or both documents are missing, ask:
+"I need two documents to build your instructions. Please paste:
+1. Your skills-document (the output from Prompt 1 about your task
+   and skills)
+2. Your knowledge-document (the output from Prompt 2 about context
+   and knowledge)
+
+Paste them both, then I'll get started."</pre>
           </div>
           <p class="prompt-tip"><strong>Tip:</strong> De instructies zijn bewust kort (150-300 woorden). De detail zit in je twee kennisdocumenten.</p>
         </div>
@@ -1650,8 +1670,12 @@ fixes?" Wait for the response before proceeding.
 
 # Let's Begin
 
+Start immediately. Do not ask what the user wants to do — just follow
+the instructions in this prompt.
+
 Let's debug your assistant. First, paste your assistant's instructions
-— the full instruction set you built.</pre>
+(the output from Prompt 3). Then I'll ask for a sample of your
+assistant's output.</pre>
           </div>
           <p class="prompt-tip"><strong>Tip:</strong> Maximaal 3 fixes per ronde. Niet alles tegelijk aanpassen.</p>
         </div>
