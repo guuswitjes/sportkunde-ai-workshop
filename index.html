@@ -98,12 +98,14 @@
       width: var(--sidebar-width);
       background: white;
       border-right: 1px solid var(--han-mercury);
-      position: sticky;
+      position: fixed;
       top: 52px;
+      left: 0;
       height: calc(100vh - 52px);
       overflow-y: auto;
       flex-shrink: 0;
       padding: 1.5rem 0;
+      z-index: 50;
     }
 
     .sidebar-label {
@@ -170,6 +172,7 @@
       flex: 1;
       padding: 2.5rem 2rem 4rem;
       max-width: calc(var(--content-max) + 4rem);
+      margin-left: var(--sidebar-width);
     }
 
     /* ── HERO ── */
@@ -596,7 +599,7 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .sidebar { display: none; }
-      .main { padding: 1.5rem 1rem 3rem; }
+      .main { padding: 1.5rem 1rem 3rem; margin-left: 0; }
       .hero { padding: 1.75rem 1rem; margin: -1.5rem -1rem 1.5rem; }
       .hero h1 { font-size: 1.6rem; }
     }
@@ -649,6 +652,7 @@
     <div class="nav-section">
       <div class="sidebar-label">Info</div>
       <a href="#installatie" class="nav-link">Installatie</a>
+      <a href="#resources" class="nav-link">Bronnen</a>
       <a href="#faq" class="nav-link">FAQ</a>
       <a href="#contact" class="nav-link">Contact</a>
     </div>
@@ -1741,6 +1745,40 @@ assistant's output.</pre>
         </ol>
       </div>
     </section>
+
+    <!-- RESOURCES -->
+    <section class="section" id="resources">
+      <h3>Bronnen</h3>
+
+      <div class="question-block">
+        <strong>AI tools (gratis)</strong>
+        <ul>
+          <li><a href="https://chatgpt.com" target="_blank" style="color:var(--han-pink);">ChatGPT</a> (OpenAI)</li>
+          <li><a href="https://claude.ai" target="_blank" style="color:var(--han-pink);">Claude</a> (Anthropic)</li>
+          <li><a href="https://gemini.google.com" target="_blank" style="color:var(--han-pink);">Gemini</a> (Google)</li>
+        </ul>
+      </div>
+
+      <div class="question-block">
+        <strong>Prompting guides</strong>
+        <ul>
+          <li><a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" style="color:var(--han-pink);">Anthropic Prompt Engineering Guide</a></li>
+          <li><a href="https://platform.openai.com/docs/guides/prompt-engineering" target="_blank" style="color:var(--han-pink);">OpenAI Prompt Engineering Guide</a></li>
+        </ul>
+      </div>
+
+      <div class="question-block">
+        <strong>Custom assistenten maken</strong>
+        <ul>
+          <li><a href="https://help.openai.com/en/articles/8554397-creating-a-gpt" target="_blank" style="color:var(--han-pink);">Custom GPTs maken (OpenAI)</a></li>
+          <li><a href="https://support.google.com/gemini/answer/14575653" target="_blank" style="color:var(--han-pink);">Gems maken (Google Gemini)</a></li>
+          <li><a href="https://support.anthropic.com/en/articles/9517075-what-are-projects" target="_blank" style="color:var(--han-pink);">Projects gebruiken (Claude)</a></li>
+        </ul>
+      </div>
+
+    </section>
+
+    <hr class="divider">
 
     <!-- FAQ -->
     <section class="section" id="faq">
